@@ -14,6 +14,12 @@
     --second-color: rgb(255, 128, 0);
 }
 
+html .loading {
+    background: #000;
+    opacity: 0;
+}
+
+
 html.cloud {
     --first-color: rgb(0, 0, 255);
     --second-color: rgb(0, 187, 255);
@@ -42,6 +48,7 @@ body {
     background-size: 200% 200%;
     background: linear-gradient(45deg, var(--first-color), var(--second-color));
     animation: moveBackground 5s ease-in forwards alternate infinite;
+    transition: all 500ms ease-in-out;
 }
 
 h1,h2 {
@@ -266,6 +273,12 @@ li:nth-child(2) button:hover {
 
 .moreDays i {
     font-size: 1.5rem;
+}
+
+
+footer {
+    margin-top: 2rem;
+    text-align: end;
 }
 
 .hidden {
