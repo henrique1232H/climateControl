@@ -30,6 +30,12 @@ html.rain {
     --second-color: rgb(10, 7, 136);
 }
 
+
+html.night {
+    --first-color: rgb(0, 0, 5);
+    --second-color: rgb(10, 7, 136);   
+}
+
 html:not(.rain) .weatherApp .ph-cloud-rain,
 html.rain .weatherApp .ph-cloud-sun,
 html.rain .weatherApp .ph-cloud-lightning,
@@ -42,7 +48,11 @@ html.sun .weatherApp .ph-moon,
 html.cloud .weatherApp .ph-cloud-rain,
 html.cloud .weatherApp .ph-cloud-lightning,
 html.cloud .weatherApp .ph-sun,
-html.cloud .weatherApp .ph-moon  {
+html.cloud .weatherApp .ph-moon,
+html.night .weatherApp .ph-sun,
+html.night .weatherApp .ph-cloud-lightning,
+html.night .weatherApp .ph-cloud-rain,
+html.night .weatherApp .ph-cloud-sun  {
     display: none;
 }
 
