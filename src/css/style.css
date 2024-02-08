@@ -34,12 +34,15 @@ html:not(.rain) .weatherApp .ph-cloud-rain,
 html.rain .weatherApp .ph-cloud-sun,
 html.rain .weatherApp .ph-cloud-lightning,
 html.rain .weatherApp .ph-sun,
+html.rain .weatherApp .ph-moon,
 html.sun .weatherApp .ph-cloud-rain,
 html.sun .weatherApp .ph-cloud-lightning,
 html.sun .weatherApp .ph-cloud-sun,
+html.sun .weatherApp .ph-moon,
 html.cloud .weatherApp .ph-cloud-rain,
 html.cloud .weatherApp .ph-cloud-lightning,
-html.cloud .weatherApp .ph-sun  {
+html.cloud .weatherApp .ph-sun,
+html.cloud .weatherApp .ph-moon  {
     display: none;
 }
 
