@@ -1,8 +1,6 @@
 
 export default function checkDate(day, entries) {
 
-    console.log(day)
-
     if(day === 0) {
         entries.textContent = "Terça"
     }

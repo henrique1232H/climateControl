@@ -1,6 +1,7 @@
 import AcessIp from "./API/AcessIp.js";
 import meteoblue from "./API/meteoblue.js";
 import checkDate from "./checkDate.js";
+import CheckI from "./checkI.js";
 
 export default async function showInformation() {
     const responseMeteoBlue = await meteoblue();
@@ -8,6 +9,8 @@ export default async function showInformation() {
     const FunctionDate = new Date();
     const heat = document.querySelectorAll(".heat");
     const moreDay = document.querySelectorAll(".moreDays h4");
+    const moreDayI = document.querySelectorAll(".moreDays i");
+
     let value = 0;
 
     console.log(responseMeteoBlue);
@@ -44,10 +47,14 @@ export default async function showInformation() {
     minMax[1].textContent = `${weather.climateMax[0]}ºC`;
 
 
-    const newWeather = weather.climateMean.filter(entries => entries !== weather.climateMean[0]);
-    
 
+    value = 0
 
+    moreDayI.forEach(entries => {
+        CheckI(entries, responseMeteoBlue.data_day.precipitation_probability[value])
+        value++
+
+    })
 
     if(weather.climateMean[0] <= 25) {
         document.documentElement.classList.remove("sun");
@@ -72,6 +79,11 @@ export default async function showInformation() {
     }
 
     const windspeed = responseMeteoBlue.data_day.windspeed_mean;
+    const relativeHumidity = responseMeteoBlue.data_day.relativehumidity_mean;
+
+    document.querySelector(".vent").textContent = `${windspeed[0]}km/h`
+
+    document.querySelector(".probability").textContent = `${relativeHumidity[0]}%`
     
     document.querySelector("h2").textContent = `${city}, ${region}`;
 

@@ -149,6 +149,9 @@ h2 {
 
 .weatherApp i {
     font-size: 15rem;
+}
+
+.moreDays i, .weatherApp i {
     background-size: 200% 200%;
     background: linear-gradient(45deg, var(--first-color), var(--second-color));
     animation: moveBackground 4s ease-in alternate infinite;
