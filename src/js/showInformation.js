@@ -71,7 +71,7 @@ export default async function showInformation() {
         document.documentElement.classList.remove("night");
     }
 
-    if(FunctionDate.getHours() >= 19 || date.getDate <= 5) {
+    if(FunctionDate.getHours() >= 19 || FunctionDate.getHours() <= 5) {
         document.documentElement.classList.remove("rain")
         document.documentElement.classList.remove("cloud");
         document.documentElement.classList.remove("sun");
